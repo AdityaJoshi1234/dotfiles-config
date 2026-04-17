@@ -1,0 +1,41 @@
+* {
+    font-family: "JetBrains MonoNL NerdFont", "Symbols NerdFont Mono";
+    font-size: 15.5px;
+    border: none;
+    border-radius: 0;
+}
+
+window#waybar {
+    background-color: #282a36; /* Dracula Background */
+    color: #f8f8f2;            /* Dracula Foreground */
+    border-bottom: 1px solid #44475a;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    color: #f8f8f2;
+}
+
+#workspaces button.focused {
+    background-color: #44475a; /* Dracula Background-alt */
+    color: #50fa7b;            /* Dracula Green */
+    border-bottom: 2px solid #bd93f9;
+}
+
+#clock,
+#pulseaudio,
+#battery,
+#memory,
+#tray {
+    padding: 0 10px;
+    color: #f8f8f2;
+}
+
+/* Matching your Polybar "Primary" color for labels */
+#clock, #memory, #pulseaudio {
+    color: #bd93f9; /* Dracula Purple */
+}
+
+#window {
+    margin-left: 10px;
+}

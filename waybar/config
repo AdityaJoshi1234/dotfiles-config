@@ -1,0 +1,55 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "spacing": 0, // Disable default spacing to control it via format
+    "modules-left": ["sway/workspaces", "custom/sep", "sway/window"],
+    "modules-center": ["clock"],
+    "modules-right": ["pulseaudio", "custom/sep", "battery", "custom/sep", "memory", "tray"],
+
+    // Reusable separator module
+    "custom/sep": {
+        "format": "|",
+        "tooltip": false
+    },
+
+    "sway/workspaces": {
+        "format": "{name}",
+        "disable-scroll": true
+    },
+
+    "sway/window": {
+        "max-length": 50,
+        "format": "{title}"
+    },
+
+    "clock": {
+        "interval": 1,
+        "format": "{:%d-%m-%Y  %H:%M:%S}"
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": " {volume}%",
+        "format-icons": {
+            "default": ["", "", ""]
+        }
+    },
+
+    "battery": {
+        "states": { "warning": 30, "critical": 15 },
+        "format": "{status} {capacity}%",
+        "format-charging": "Charging {capacity}%",
+        "format-discharging": "Discharging {capacity}%"
+    },
+
+    "memory": {
+        "interval": 2,
+        "format": "RAM {percentage}%"
+    },
+
+    "tray": {
+        "icon-size": 16,
+        "spacing": 10
+    }
+}
