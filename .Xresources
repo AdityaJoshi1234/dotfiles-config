@@ -1,0 +1,5 @@
+Sxiv.background: #282a36
+Sxiv.foreground: #f8f8f2
+Sxiv.font: monospace-10
+Xcursor.theme: elementary
+Xcursor.size: 24
