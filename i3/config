@@ -195,11 +195,11 @@ client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
 smart_gaps on
 for_window [floating] move position center, resize set 1280x768
 gaps outer 3
-gaps inner 8
+gaps inner 5
 #gaps outer 5
 #gaps inner 5 
-#gaps outer 2
-#gaps inner 4
+#gaps outer 7
+#gaps inner 10
 title_align center
 exec --no-startup-id autotiling
 exec searxng-run

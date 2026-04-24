@@ -1,18 +1,45 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
-#!/bin/sh
+# sxiv key handler
+# Triggered in sxiv via: Ctrl+x <key>
+# The pressed key is passed as $1. 
+# The selected file paths are passed via standard input (stdin).
 
-# The key pressed is passed as the first argument
-key="$1"
+KEY="$1"
 
-case "$key" in
-    # Bind to 'd' (Triggered in sxiv via Ctrl+x d)
+# --- Configuration Variables ---
+# Define your directories here so they are easy to change later
+MOVE_DIR="$HOME/Pictures/Wall-Move"
+
+# Ensure the target directory exists so mv doesn't fail
+mkdir -p "$MOVE_DIR"
+# -------------------------------
+
+case "$KEY" in
     "d")
+        # Drag and drop selected files
         # tr converts newlines to null characters to safely handle filenames with spaces
         # xargs -0 reads the null-separated list and passes it to dragon-drop
         tr '\n' '\0' | xargs -0 dragon-drop -A &
         ;;
         
-    # You can add other keybindings here 
-    #     ;;
+    "v")
+        # Move selected files to the target directory
+        # We use a while loop to read each file passed via stdin
+        while IFS= read -r file; do
+            # Check if the file actually exists before trying to move it
+            if [ -e "$file" ]; then
+                mv "$file" "$MOVE_DIR/"
+            fi
+        done
+        
+        # Optional: Uncomment the line below to get a desktop notification when done
+        # notify-send "sxiv" "Moved selected files to Wall-Move"
+        ;;
+        
+    *)
+        # Catch-all for unbound keys
+        echo "Unbound key: $KEY" >&2
+        exit 1
+        ;;
 esac
