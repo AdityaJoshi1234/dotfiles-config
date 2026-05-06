@@ -213,7 +213,7 @@ exec --no-startup-id xsetroot -cursor_name left_ptr
 #exec redshift -l 22:72
 exec xrdb -merge ~/.Xresources
 ####### Web Browser Bindings #######
-bindsym $mod+f exec helium-browser --profile-directory="Default"
+bindsym $mod+f exec mercury-browser-sse4 
 bindsym $mod+Shift+w exec helium-browser --profile-directory="Profile 2"
 bindsym $mod+ctrl+c exec bash ~/firefox.sh
 bindsym $mod+Shift+b exec mercury-browser-sse4
@@ -238,6 +238,7 @@ assign [class="Audacity"] 4
 
 ####### TUI/CLI app Binding #######
 bindsym $mod+r exec dmenu_run -c -l 20 -fn "JetBrains MonoNL Nerd Font:style=Light:size=13"
+#bindsym $mod+r exec st -f "JetBrains MonoNL NerdFont:style=Light:size=12.5" -e 
 #t/Shield.sh#bindsym $mod+r exec rofi  -show drun 
 #bindsym $mod+shift+e exec bash ~/.config/i3/dmenu_exit.sh
 bindsym $mod+shift+p exec bash ~/.youtube.sh
