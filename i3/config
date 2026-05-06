@@ -267,6 +267,7 @@ bindsym $mod+ctrl+Down exec i3move down
 bindsym $mod+ctrl+t exec bash ~/.config/script/wall.sh 
 bindsym $mod+o focus mode_toggle
 bindsym $mod+Shift+v exec st -f "JetBrains MonoNL NerdFont:style=Light:size=12.5" -e nvim ~/Documents/notes.txt
+
 ####### Assorted App Binding #######
 bindsym $mod+ctrl+j java -jar ~/Desktop/Tlauncher/TLauncher-2.885.jar
 bindsym $mod+shift+m exec i3-sensible-terminal -e "sudo mount /dev/sda1 /home/aditya/4TB" 
@@ -284,10 +285,12 @@ bindsym $mod+Print exec flameshot gui
 bindsym $mod+Shift+u exec playerctl --player=mpd play-pause 
 bindsym $mod+ctrl+n exec playerctl --player=mpd next 
 bindsym $mod+ctrl+p exec playerctl --player=mpd previous
+
 ###### Youtube Binding ######
 bindsym $mod+y exec bash ~/.config/script/720.sh
 bindsym $mod+u exec bash ~/.config/script/1080.sh
 bindsym $mod+shift+g exec bash ~/.config/script/Shield.sh
+
 ###### Brightness Control ######
 bindsym $mod+ctrl+1 exec brightnessctl set 10%
 bindsym $mod+ctrl+2 exec brightnessctl set 20%
@@ -299,11 +302,3 @@ bindsym $mod+ctrl+7 exec brightnessctl set 70%
 bindsym $mod+ctrl+8 exec brightnessctl set 80%
 bindsym $mod+ctrl+9 exec brightnessctl set 90%
 bindsym $mod+ctrl+0 exec brightnessctl set 100%
-
-
-
-
-
-
-
-
