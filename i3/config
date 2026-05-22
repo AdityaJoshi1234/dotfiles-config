@@ -215,6 +215,7 @@ exec --no-startup-id xsetroot -cursor_name left_ptr
 exec xrdb -merge ~/.Xresources
 ####### Web Browser Bindings #######
 bindsym $mod+f exec mercury-browser-avx2
+bindsym $mod+ctrl+y exec mercury-browser-avx2 youtube.com
 bindsym $mod+Shift+w exec helium-browser --profile-directory="Profile 2"
 bindsym $mod+ctrl+c exec bash ~/firefox.sh
 bindsym $mod+Shift+b exec mercury-browser-sse4
@@ -250,7 +251,6 @@ bindsym $mod+ctrl+h exec  st -f "JetBrains MonoNL NerdFont:style=Light:size=12.5
 #bindsym $mod+ctrl+q exec st -f "JetBrains MonoNL NerdFont:style=Light:size=12.5" -e bash ~/qobuz.sh
 bindsym $mod+b exec qrencode -t PNG -s 22 --background=282a36 --foreground=bd93f9 -o /tmp/file.png "$(xclip -o)" && sxiv /tmp/file.png 
 bindsym $mod+Shift+y exec bash ~/.config/script/Youtube-local.sh 
-bindsym $mod+ctrl+y exec bash ~/yt-dlp.sh $(xsel -bo)
 #bindsym $mod+b exec st -f "JetBrains MonoNL NerdFont:style=Light:size=13" -e newsboat
 bindsym $mod+shift+a exec bash ~/.mpv-mp3.sh
 bindsym $mod+i exec bash ~/.config/script/feh.sh
