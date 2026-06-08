@@ -243,13 +243,14 @@ bindsym $mod+r exec dmenu_run -c -l 20 -fn "JetBrains MonoNL Nerd Font:style=Lig
 #bindsym $mod+r exec st -f "JetBrains MonoNL NerdFont:style=Light:size=12.5" -e 
 #t/Shield.sh#bindsym $mod+r exec rofi  -show drun 
 #bindsym $mod+shift+e exec bash ~/.config/i3/dmenu_exit.sh
+bindsym $mod+F9 exec notify-send "Starting up yt-local" && python3 ~/Projects/yt-local/server.py 
 bindsym $mod+shift+p exec bash ~/.youtube.sh
 bindsym $mod+w exec bash ~/.config/script/waldl
 bindsym $mod+c exec st -f "JetBrains MonoNL NerdFont:style=Light:size=12.5" -e ncmpcpp 
 bindsym $mod+ctrl+g exec  st -f "JetBrains MonoNL NerdFont:style=Light:size=12.5" -e sudo auto-cpufreq --force powersave
 bindsym $mod+ctrl+h exec  st -f "JetBrains MonoNL NerdFont:style=Light:size=12.5" -e sudo auto-cpufreq --force performance
 #bindsym $mod+ctrl+q exec st -f "JetBrains MonoNL NerdFont:style=Light:size=12.5" -e bash ~/qobuz.sh
-bindsym $mod+b exec qrencode -t PNG -s 22 --background=282a36 --foreground=bd93f9 -o /tmp/file.png "$(xclip -o)" && sxiv /tmp/file.png 
+bindsym $mod+b exec qrencode -t PNG -s 22 --background=282a36 --foreground=bd93f9 -o /tmp/file.png "$(xsel -bo)" && sxiv /tmp/file.png 
 bindsym $mod+Shift+y exec bash ~/.config/script/Youtube-local.sh 
 #bindsym $mod+b exec st -f "JetBrains MonoNL NerdFont:style=Light:size=13" -e newsboat
 bindsym $mod+shift+a exec bash ~/.mpv-mp3.sh
