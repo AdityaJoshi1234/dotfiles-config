@@ -214,9 +214,9 @@ exec --no-startup-id xsetroot -cursor_name left_ptr
 #exec redshift -l 22:72
 exec xrdb -merge ~/.Xresources
 ####### Web Browser Bindings #######
-bindsym $mod+f exec mercury-browser-avx2
 bindsym $mod+ctrl+y exec mercury-browser-avx2 youtube.com
-bindsym $mod+Shift+w exec helium-browser --profile-directory="Profile 2"
+bindsym $mod+Shift+w exec helium-browser --profile-directory="Default"
+bindsym $mod+f exec floorp
 bindsym $mod+ctrl+c exec bash ~/firefox.sh
 bindsym $mod+Shift+b exec mercury-browser-sse4
 bindsym $mod+Shift+f exec helium-browser --profile-directory="Profile 1" 
