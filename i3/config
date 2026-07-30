@@ -195,8 +195,8 @@ client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
 #client.background       #F8F8F
 #smart_gaps on
 for_window [floating] move position center, resize set 1280x768
-gaps outer 7
-gaps inner 10
+gaps outer 3
+gaps inner 7
 #gaps outer 5
 #gaps inner 5 
 #gaps outer 7
@@ -214,7 +214,6 @@ exec --no-startup-id xsetroot -cursor_name left_ptr
 #exec redshift -l 22:72
 exec xrdb -merge ~/.Xresources
 ####### Web Browser Bindings #######
-bindsym $mod+ctrl+y exec mercury-browser-avx2 youtube.com
 bindsym $mod+Shift+w exec helium-browser --profile-directory="Default"
 bindsym $mod+f exec floorp
 bindsym $mod+ctrl+c exec bash ~/firefox.sh
@@ -243,7 +242,7 @@ bindsym $mod+r exec dmenu_run -c -l 20 -fn "JetBrains MonoNL Nerd Font:style=Lig
 #bindsym $mod+r exec st -f "JetBrains MonoNL NerdFont:style=Light:size=12.5" -e 
 #t/Shield.sh#bindsym $mod+r exec rofi  -show drun 
 #bindsym $mod+shift+e exec bash ~/.config/i3/dmenu_exit.sh
-bindsym $mod+F9 exec notify-send "Starting up yt-local" && python3 ~/Projects/yt-local/server.py 
+bindsym $mod+F9 exec notify-send "Starting up yt-local" && bash ~/.config/script/yt-local.sh
 bindsym $mod+shift+p exec bash ~/.youtube.sh
 bindsym $mod+w exec bash ~/.config/script/waldl
 bindsym $mod+c exec st -f "JetBrains MonoNL NerdFont:style=Light:size=12.5" -e ncmpcpp 
@@ -251,7 +250,6 @@ bindsym $mod+ctrl+g exec  st -f "JetBrains MonoNL NerdFont:style=Light:size=12.5
 bindsym $mod+ctrl+h exec  st -f "JetBrains MonoNL NerdFont:style=Light:size=12.5" -e sudo auto-cpufreq --force performance
 #bindsym $mod+ctrl+q exec st -f "JetBrains MonoNL NerdFont:style=Light:size=12.5" -e bash ~/qobuz.sh
 bindsym $mod+b exec qrencode -t PNG -s 22 --background=282a36 --foreground=bd93f9 -o /tmp/file.png "$(xsel -bo)" && sxiv /tmp/file.png 
-bindsym $mod+Shift+y exec bash ~/.config/script/Youtube-local.sh 
 #bindsym $mod+b exec st -f "JetBrains MonoNL NerdFont:style=Light:size=13" -e newsboat
 bindsym $mod+shift+a exec bash ~/.mpv-mp3.sh
 bindsym $mod+i exec bash ~/.config/script/feh.sh
@@ -291,6 +289,7 @@ bindsym $mod+ctrl+p exec playerctl --player=mpd previous
 ###### Youtube Binding ######
 bindsym $mod+y exec bash ~/.config/script/720.sh
 bindsym $mod+u exec bash ~/.config/script/1080.sh
+bindsym $mod+ctrl+y floorp http://localhost:9010/$(xsel -bo) 
 bindsym $mod+shift+g exec bash ~/.config/script/Shield.sh
 
 ###### Brightness Control ######
