@@ -248,7 +248,7 @@ bindsym $mod+b exec qrencode -t PNG -s 22 --background=282a36 --foreground=bd93f
 bindsym $mod+shift+a exec bash ~/.mpv-mp3.sh
 bindsym $mod+i exec bash ~/.config/script/feh.sh
 bindsym $mod+Shift+i exec wget $(xsel -bo)
-bindsym $mod+Shift+Return exec kitty 
+bindsym $mod+Shift+Return exec alacritty 
 bindsym $mod+d exec st -f "JetBrains MonoNL NerdFont:style=Light:size=12" -e bash ~/test.sh 
 #bindsym $mod+x [floating] resize set 900 500 ; move position center
 bindsym $mod+x [floating] resize set 900 500 ; move position center 
